@@ -1,5 +1,6 @@
 require('@google/cloud-debug');
 
 exports.helloworld=function helloworld(req,res){
-    res.status(200).send('Hi from Rome Italy.');
+    let name=req.query.name||'Roma';
+    res.status(200).send('Hi from ${name}.');
 }
